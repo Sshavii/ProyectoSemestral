@@ -4,14 +4,11 @@ body{
   margin: 0;
   font-family: Arial, sans-serif;   
 }
-.logo{
-    ;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ededed;
+    background-color: #ECECEC;
     padding: 10px;
 }
 
@@ -55,5 +52,3 @@ li a {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
-  

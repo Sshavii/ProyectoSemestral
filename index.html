@@ -6,43 +6,50 @@
     <title>El Comilon</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mystyle.css">
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navbar</title>
-        <link rel="stylesheet" href="styles.css">
 </head>
 
 <body> 
-      <nav class="navbar">
-            <div class="logo">
-                <img src="imagenes/logo comilon.png" alt="Logo">
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex w-50 me-auto">
+                <!-- Logo -->
+                <img src="imagenes/logo comilon.png" alt="" style="width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Locales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Promociones</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Right</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Right</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Menú</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-      </nav>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-mx">
-            <div class="imagen-con-superposicion">
-              <img src="imagenes/HEADER.jpg" class="img-fluid" alt="semen">
-              <div class="contenido-superpuesto">
-                <p>Aquí va tu texto</p>
-                <button class="btn btn-primary">Botón</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    <script
-    src="js/bootstrap.bundle.js">
-    </script>    
+    </nav>
+    
+    <div class="bg-image" style="background-image: url('imagenes/HEADER.jpg'); height: 80vh"></div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
-
 </html>
