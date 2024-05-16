@@ -61,3 +61,7 @@ body {
 .bg-light {
     background-color: rgb(250, 247, 247) !important;
 }
+
+.error-input {
+    border: 1px solid red;
+}

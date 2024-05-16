@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style/registro.css">
+    <link rel="stylesheet" href="style/validaciones.css"> <!-- Agrega el nuevo archivo CSS -->
 
     <title>EL COMILON | Registro</title>
 </head>
@@ -20,24 +21,24 @@
                         <h2 class="text-secondary">¡Regístrate Ahora!</h2>
                         <p class="text-secondary">Únete a nosotros para comenzar a ordenar deliciosos platos a domicilio.</p>
                     </div>
-                    <form id="registroForm" data-parsley-validate>
+                    <form id="registroForm">
                         <div class="input-group mb-3">
-                            <input type="text" id="nombre" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Nombre" required data-parsley-trigger="change">
-                            <input type="text" id="apellidos" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Apellidos" required data-parsley-trigger="change">
+                            <input type="text" id="nombre" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Nombre" required>
+                            <input type="text" id="apellidos" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Apellidos" required>
                         </div>                        
                         <div class="input-group mb-3">
-                            <input type="email" id="email" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Correo electrónico" required data-parsley-type="email" data-parsley-trigger="change">
+                            <input type="email" id="email" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Correo electrónico" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" id="password" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Contraseña" required data-parsley-minlength="6" data-parsley-trigger="change">
+                            <input type="password" id="password" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Contraseña" required>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">+56</span>
-                            <input type="tel" id="telefono" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Número de teléfono" required data-parsley-pattern="\+56\d{9}" data-parsley-trigger="change">
+                            <input type="tel" id="telefono" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Número de teléfono" required>
                         </div>
                                             
                         <div class="input-group mb-3">
-                            <input type="text" id="direccion" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Dirección de entrega" required data-parsley-trigger="change">
+                            <input type="text" id="direccion" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Dirección de entrega" required>
                         </div>
                         <div class="input-group mb-3">
                             <input type="text" id="departamento" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Número de departamento">
@@ -71,7 +72,6 @@
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="style/validaciones.js"></script>
 </body>
 </html>
