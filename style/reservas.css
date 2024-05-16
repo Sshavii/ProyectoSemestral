@@ -7,7 +7,7 @@
 }
 
 body {
-  height: 100vh;
+  height: auto;
 }
 
 .navbar {
@@ -63,4 +63,14 @@ body {
   border-radius: 45px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.btn-iniciar-sesion {
+  background-color: #FF3A3A;
+  border-color: #FF3A3A;
+}
+
+.btn-iniciar-sesion:hover {
+  background-color: #E62626;
+  border-color: #E62626;
 }
