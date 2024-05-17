@@ -17,16 +17,18 @@
     <div class="header_container">
         <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center fixed-top">
             <div class="container">
-                <a href="#" class="navbar-brand d-flex w-50 me-auto">
-                    <img src="imagenes/logo.png" alt="" style="width: 100px;">
-                </a>
+                <div class="navbar-brand d-flex w-50 me-auto">
+                    <a href="index.html" style="display: block;">
+                        <img src="imagenes/logo.png" alt="logo" style="width: 100px;">
+                    </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
                     <ul class="navbar-nav w-100 justify-content-center">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="carta.html">Carta</a>
@@ -40,7 +42,7 @@
                     </ul>
                     <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
                         <li class="nav-item">
-                            <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                                 <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
                             </button>
                         </li>
@@ -80,6 +82,15 @@
             </div>
         </div>
         
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasCartLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>No tienes productos en tu carrito.</p>
+            </div>
+        </div>
 
         <div class="home_section">
             <div class="container">
@@ -88,7 +99,7 @@
                     <h2 class="heading_second_home">¡No esperes más!</h2>
                     <h6 class="heading_third_home">Empieza a ordenar comida hoy</h6>
                     <a href="#" class="btn_home_content">Ordenar</a>
-                    <a href="#" class="btn_home_content">Reservar</a>
+                    <a href="reservas.html" class="btn_home_content">Reservar</a>
                 </div>
             </div>
         </div>
@@ -131,7 +142,7 @@
                     <h3 class="heading_footer">EL COMILON</h3>
                     <ul class="navbar_footer">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="carta.html">Carta</a>
@@ -142,9 +153,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Promociones</a>
+                            <a class="nav-link" href="locales.html">Locales</a>
                         </li>
-
                     </ul>
                     <div class="social_icon_footer">
                         <span class="icon_content_footer"><i class="fa-brands fa-facebook-f"></i></span>
@@ -156,13 +166,13 @@
                 <div class="footer_botton_section">
                     
                 </div>
-                </div>
             </div>
         </footer>
   
     </div>
 
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="style/validaciones-offcanvas.js"></script>
 </body>
 
 </html>
