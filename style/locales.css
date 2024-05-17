@@ -105,6 +105,8 @@ body {
   border-color: #E62626;
 }
 
-.maps{
-  text-align: center;;
+.card{
+  padding: 15px;
+ text-align: center;
 }
+
