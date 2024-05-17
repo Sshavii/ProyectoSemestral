@@ -38,7 +38,7 @@
                 </ul>
                 <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
                     <li class="nav-item">
-                        <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                             <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
                         </button>
                     </li>
@@ -51,6 +51,43 @@
             </div>
         </div>
     </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Iniciar Sesión</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary btn-iniciar-sesion"><small>Iniciar Sesión</small></button>
+                <div class="mt-3">
+                    <button class="btn btn-light btn-block"><img src="imagenes/google-icon.png" style="width:20px" class="me-2"><small>Iniciar sesión con Google</small></button>
+                </div>
+            </form>
+            <div class="mt-3">
+                ¿No tienes una cuenta? <a href="registro.html">Regístrate</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>No tienes productos en tu carrito.</p>
+        </div>
+    </div>
+
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-5 p-3 bg-white shadow box-area position-relative">
             <div class="col-md-12 right-box">
@@ -144,5 +181,6 @@
     <script src="https://kit.fontawesome.com/0f29ac535c.js" crossorigin="anonymous"></script>
     <script src="style/reservas.js"></script>
     <script src="js/bootstrap.bundle.js"></script>  
+    <script src="style/validaciones-offcanvas.js"></script>
 </body>
 </html>
