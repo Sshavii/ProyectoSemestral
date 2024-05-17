@@ -1,148 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style/reservas.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0f29ac535c.js" crossorigin="anonymous"></script>
+
+    <title>EL COMILON | Reservas</title>
 </head>
-
 <body>
-    <div class="header_container">
-        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex w-50 me-auto">
-                    <img src="imagenes/logo.png" alt="" style="width: 100px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsingNavbar3">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-                    <ul class="navbar-nav w-100 justify-content-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carta.html">Carta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reservas.html">Reservas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
-                        <li class="nav-item">
-                            <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="bi bi-person" style="font-size: 1.5rem;"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Iniciar Sesión</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area position-relative">
+            <div class="col-md-12 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4 text-center">
+                        <h2 class="text-secondary">¡Reserva tu mesa ahora!</h2>
+                        <p class="text-secondary">Completa el siguiente formulario para reservar una mesa.</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-iniciar-sesion"><small>Iniciar Sesión</small></button>
-                    <div class="mt-3">
-                        <button class="btn btn-light btn-block"><img src="imagenes/google-icon.png" style="width:20px" class="me-2"><small>Iniciar sesión con Google</small></button>
-                    </div>
-                </form>
-                <div class="mt-3">
-                    ¿No tienes una cuenta? <a href="registro.html">Regístrate</a>
+                    <form id="reservaForm">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" id="nombre" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Nombre" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="apellido" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Apellido" required>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="date" id="fecha" class="form-control form-control-lg bg-light text-secondary fs-6" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="time" id="hora" class="form-control form-control-lg bg-light text-secondary fs-6" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">+56</span>
+                            <input type="tel" id="telefono" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Teléfono" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="number" id="num_personas" class="form-control form-control-lg bg-light text-secondary fs-6" placeholder="Número de personas" min="1" required>
+                        </div>
+                        <div id="errors-container" class="mb-3"></div>
+                        <div class="input-group mb-3">
+                            <button type="submit" class="btn btn-lg btn-primary w-100 fs-6 bg-primary">Reservar</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-
-    <div class="container-fluid">
-        <section id="reservas" class="container mt-5">
-            <h2>!RESERVA CON NOSOTROS!</h2>
-            <form action="procesar_reserva.php" method="post">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="fecha" class="form-label">Fecha:</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="hora" class="form-label">Hora:</label>
-                    <input type="time" class="form-control" id="hora" name="hora" required>
-                </div>
-                <div class="mb-3">
-                    <label for="personas" class="form-label">Número de personas:</label>
-                    <input type="number" class="form-control" id="personas" name="personas" min="1" required>
-                </div>
-
-                <a href="reservar.html" class="btn btn-primary">Reservar</a>
-            </form>
-        </section>
-
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_top">
-                <h3 class="heading_footer">EL COMILON</h3>
-                <ul class="navbar_footer">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="carta.html">Carta</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="reservas.html">Reservas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Promociones</a>
-                    </li>
-
-                </ul>
-                <div class="social_icon_footer">
-                    <span class="icon_content_footer"><i class="fa-brands fa-facebook-f"></i></span>
-                    <span class="icon_content_footer"><i class="fa-brands fa-twitter"></i></span>
-                    <span class="icon_content_footer"><i class="fa-brands fa-instagram"></i></span>
-                
-                </div>
-            </div>
-            <div class="footer_botton_section">
-                
-            </div>
+            </div> 
         </div>
     </div>
-    <script src="js/bootstrap.bundle.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="style/validaciones-reserva.js"></script>
 </body>
-
 </html>
