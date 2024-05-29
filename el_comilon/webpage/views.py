@@ -1,9 +1,13 @@
 from django.shortcuts import render
+from .models import Genero, Usuario
 
 
 # Create your views here.
 def index(request):
-    context = {}
+    usuarios = Usuario.objects.all()
+    context = {
+        "Usuarios": usuarios,
+    }
     return render(request, 'pages/index.html', context)
 
 def carta(request):
