@@ -1,154 +1,71 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL COMILON</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/locales.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0f29ac535c.js" crossorigin="anonymous"></script>
+    <title>Contáctenos</title>
+    <link rel="stylesheet" href="{% static 'css/style-locales.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-
 <body>
-
     <div class="header_container">
-        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center fixed-top">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex w-50 me-auto">
-                    <img src="imagenes/logo.png" alt="" style="width: 100px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-                    <ul class="navbar-nav w-100 justify-content-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carta.html">Carta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reservas.html">Reservas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="locales.html">Locales</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
-                        <li class="nav-item">
-                            <button class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="bi bi-person" style="font-size: 1.5rem;"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Iniciar Sesión</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-iniciar-sesion"><small>Iniciar Sesión</small></button>
-                    <div class="mt-3">
-                        <button class="btn btn-light btn-block"><img src="imagenes/google-icon.png" style="width:20px" class="me-2"><small>Iniciar sesión con Google</small></button>
-                    </div>
-                </form>
-                <div class="mt-3">
-                    ¿No tienes una cuenta? <a href="registro.html">Regístrate</a>
+        {% include 'base/navbar.html' %}
+
+        <div class="container contact-us">
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-12 mb-4 contact-form">
+                    <h2 class="contact-title">Contáctenos</h2>
+                    <p class="contact-description">¡Esperamos trabajar con usted! Háganos saber si tiene alguna pregunta.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="firstName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="selectOption" class="form-label">Seleccionar</label>
+                            <select class="form-select" id="selectOption">
+                                <option selected>Elige...</option>
+                                <option value="1">Opción 1</option>
+                                <option value="2">Opción 2</option>
+                                <option value="3">Opción 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Código de Área" style="width: 20%;">
+                                <input type="text" class="form-control" placeholder="Número de Teléfono">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 contact-info">
+                    <h4 class="contact-title">Local Nueva Providencia</h4>
+                    <p class="contact-description">Av. Nueva Providencia 2034</p>
+                    <p class="contact-description">Horario: Lunes a Domingo 12:00 a 22:00 hrs</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208.12294431164554!2d-70.61137140563542!3d-33.424101852044835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf6d9ea3a2e1%3A0x25d64b9bf3ef3746!2sMaju%20Per%C3%BA%20Providencia!5e0!3m2!1ses!2scl!4v1715916623142!5m2!1ses!2scl" class="map" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
-        <div class="container menu-container">
-            <div class="row">
-                <div class="col-auto">
-                    <div class="card">
-                        <img src="imagenes/local.png" class="card-img-top" alt="Imagen del producto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Local Nueva Providencia</h5>
-                            <p class="card-text"></p>
-                            <p class="card-text">Av. Nueva Providencia 2034</p>
-                            <p class="card-text">Horario:
-                                Lunes a Domingo
-                                12:00 a 22:00 hrs</p>
-                            <div class="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208.12294431164554!2d-70.61137140563542!3d-33.424101852044835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf6d9ea3a2e1%3A0x25d64b9bf3ef3746!2sMaju%20Per%C3%BA%20Providencia!5e0!3m2!1ses!2scl!4v1715916623142!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <img src="imagenes/local2.png" class="card-img-top" alt="Imagen del producto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Local Paseo El Tamarugo</h5>
-                            <p class="card-text"></p>
-                            <p class="card-text">Av Vitacura 4607</p>
-                            <p class="card-text">Horario:
-                                Lunes a Domingo
-                                12:00 a 22:00 hrs</p>
-                            <div class="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208.18413791204188!2d-70.58668823941181!3d-33.39856760205906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf31fb271b7f%3A0x94f8d926a5163a6c!2sPaseo%20El%20Tamarugo!5e0!3m2!1ses!2scl!4v1715916093372!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>></div>
-                        </div>
-                    </div>
-                </div>
-        </div>
+
+        {% include 'base/footer.html' %}
         
-        <footer class="footer">
-            <div class="container">
-                <div class="footer_top">
-                    <h3 class="heading_footer">EL COMILON</h3>
-                    <ul class="navbar_footer">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carta.html">Carta</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="reservas.html">Reservas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Promociones</a>
-                        </li>
-
-                    </ul>
-                    <div class="social_icon_footer">
-                        <span class="icon_content_footer"><i class="fa-brands fa-facebook-f"></i></span>
-                        <span class="icon_content_footer"><i class="fa-brands fa-twitter"></i></span>
-                        <span class="icon_content_footer"><i class="fa-brands fa-instagram"></i></span>
-                    
-                    </div>
-                </div>
-                <div class="footer_botton_section">
-                    
-                </div>
-                </div>
-            </div>
-        </footer>
-  
     </div>
-
-    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
-
 </html>
