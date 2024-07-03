@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
 body {
     font-family: 'Poppins', sans-serif;
     background: rgb(250, 247, 247);
@@ -39,12 +37,13 @@ body {
 }
 
 .left-box {
-    background: url('../imagenes/login-bg.jpg') no-repeat center center;
+    background: url('../images/login-bg.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     position: relative;
 }
 
+.login-bg
 .text-primary {
     color: #FF3A3A !important;
 }
