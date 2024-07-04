@@ -1,6 +1,8 @@
-from django.contrib import admin
-from .models import Genero, Usuario
+# En webpage/admin.py
 
-# Register your models here.
-admin.site.register(Genero)
-admin.site.register(Usuario)
+from django.contrib import admin
+from .models import Producto
+
+@admin.register(Producto)
+class ProductoAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'precio', 'disponible')
